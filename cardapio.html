@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Completo | Padaria do Pipo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">Padaria do Pipo</a>
+        </div>
+        
+        <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu de navegação" aria-expanded="false">
+            ☰ 
+        </button>
+        
+        <nav class="main-nav" id="main-nav"> 
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#por-que-pipo">Quem Somos</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="index.html#localizacao">Localização</a></li>
+                <li><a href="carrinho.html" class="carrinho-link">
+                        Carrinho
+                        <span id="carrinho-contador">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="cardapio-completo">
+            
+            <div class="cardapio-acoes-superiores">
+                <a href="index.html" class="btn-voltar-inicio">
+                    ← Voltar para a Página Inicial
+                </a>
+            </div>
+            <h2>Cardápio Completo do Forno</h2>
+
+            <p class="introducao-cardapio">
+                Aqui você encontra a lista completa dos nossos produtos. Se precisar de algo para retirada imediata,
+                confira a seção <a href="index.html#destaque-do-dia">Destaques de Hoje</a> na nossa página inicial.
+            </p>
+
+            <div class="bloco-cardapio">
+                <h3>Pães de Fermentação Lenta</h3>
+                <ul class="lista-itens">
+                    <li class="produto-cardapio">
+                        <img src="assets/pao-campagne.jpg" alt="Pão Campagne Artesanal" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Pão Campagne (Integral)</strong>
+                            <p>Casca rústica e miolo macio. Perfeito para acompanhar seu café da manhã.</p>
+                            <span class="preco">R$ 22,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Pão Campagne (Integral)"
+                            data-preco="22.00" 
+                            data-img="assets/pao-campagne.jpg">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/pao-multigraos.png" alt="Pão Multigrãos" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Pão Multigrãos</strong>
+                            <p>Mistura de sementes e grãos, nutritivo e saboroso.</p>
+                            <span class="preco">R$ 24,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Pão Multigrãos"
+                            data-preco="24.00" 
+                            data-img="assets/pao-multigraos.png">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/foccacia.jpg" alt="Focaccia de Alecrim" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Focaccia com Alecrim e Azeite Extra Virgem</strong>
+                            <p>Massa aerada e sabor da Itália.</p>
+                            <span class="preco">R$ 15,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Focaccia com Alecrim e Azeite Extra Virgem"
+                            data-preco="15.00" 
+                            data-img="assets/foccacia.jpg">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/baguete-classica.jpg" alt="Baguete Clássica" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Baguete Clássica</strong>
+                            <p>Crocante por fora, leve por dentro. Ideal para sanduíches.</p>
+                            <span class="preco">R$ 8,50</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Baguete Clássica"
+                            data-preco="8.50" 
+                            data-img="assets/baguete-classica.jpg">Adicionar</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bloco-cardapio">
+                <h3>Doces e Salgados Folhados</h3>
+                <ul class="lista-itens">
+
+                    <li class="produto-cardapio">
+                        <img src="assets/bolo-laranja.jpg" alt="Bolo de Laranja da Vó" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Bolo de Laranja da Vó</strong>
+                            <p>Fofinho, com cobertura de glacê. Perfeito para o café.</p>
+                            <span class="preco">R$ 38,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Bolo de Laranja da Vó"
+                            data-preco="38.00" 
+                            data-img="assets/bolo-laranja.jpg">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/croissant.jpg" alt="Croissant Clássico" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Croissant Clássico</strong>
+                            <p>Manteiga pura, folhado perfeito, crocante e macio.</p>
+                            <span class="preco">R$ 9,50</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Croissant Clássico"
+                            data-preco="9.50" 
+                            data-img="assets/croissant.jpg">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/croissant-chocolate.jpg" alt="Croissant de Chocolate Belga"
+                                     class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Croissant de Chocolate Belga</strong>
+                            <p>Folhado perfeito, com recheio de chocolate.</p>
+                            <span class="preco">R$ 14,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Croissant de Chocolate Belga"
+                            data-preco="14.00" 
+                            data-img="assets/croissant-chocolate.jpg">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/torta-maca.jpg" alt="Torta de Maçã e Canela" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Torta de Maçã e Canela</strong>
+                            <p>Massa amanteigada e recheio cremoso. (Sob encomenda).</p>
+                            <span class="preco">R$ 55,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Torta de Maçã e Canela"
+                            data-preco="55.00" 
+                            data-img="assets/torta-maca.jpg">Adicionar</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bloco-cardapio">
+                <h3>Cafés, Chás e Bebidas</h3>
+                <ul class="lista-itens">
+
+                    <li class="produto-cardapio">
+                        <img src="assets/cafe.jpg" alt="Café Especial Coado" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Café Especial Coado</strong>
+                            <p>Grãos selecionados, coado na hora. O aroma que aquece a alma.</p>
+                            <span class="preco">R$ 7,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Café Especial Coado"
+                            data-preco="7.00" 
+                            data-img="assets/cafe.jpg">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/latte-macchiato.jpg" alt="Latte Macchiato" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Latte Macchiato</strong>
+                            <p>Expresso, leite vaporizado e espuma. Perfeito para começar o dia.</p>
+                            <span class="preco">R$ 12,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Latte Macchiato"
+                            data-preco="12.00" 
+                            data-img="assets/latte-macchiato.jpg">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/cha-frutas.jpg" alt="Chá de Frutas Vermelhas Gelado" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Chá de Frutas Vermelhas (Gelado)</strong>
+                            <p>Natural e refrescante. Sem adição de açúcares.</p>
+                            <span class="preco">R$ 9,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Chá de Frutas Vermelhas (Gelado)"
+                            data-preco="9.00" 
+                            data-img="assets/cha-frutas.jpg">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/suco-laranja.jpg" alt="Suco de Laranja Natural" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Suco de Laranja Natural</strong>
+                            <p>Feito na hora, sem conservantes.</p>
+                            <span class="preco">R$ 10,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Suco de Laranja Natural"
+                            data-preco="10.00" 
+                            data-img="assets/suco-laranja.jpg">Adicionar</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bloco-cardapio">
+                <h3>Opções Especiais (Veganas / Sem Glúten)</h3>
+                <ul class="lista-itens">
+
+                    <li class="produto-cardapio">
+                        <img src="assets/pao-vegano.jpg" alt="Pão de Batata Doce Vegano" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Pão de Batata Doce Vegano</strong>
+                            <p>Sem ingredientes de origem animal, fofura garantida.</p>
+                            <span class="preco">R$ 28,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Pão de Batata Doce Vegano"
+                            data-preco="28.00" 
+                            data-img="assets/pao-vegano.jpg">Adicionar</a>
+                    </li>
+
+                    <li class="produto-cardapio">
+                        <img src="assets/muffin-sg.jpg" alt="Muffin de Banana com Aveia" class="imagem-cardapio">
+                        <div class="info-produto">
+                            <strong>Muffin de Banana com Aveia (SG)</strong>
+                            <p>Opção sem glúten e sem lactose.</p>
+                            <span class="preco">R$ 12,00</span>
+                        </div>
+                        <a href="#" class="btn-carrinho"
+                            data-titulo="Muffin de Banana com Aveia (SG)"
+                            data-preco="12.00" 
+                            data-img="assets/muffin-sg.jpg">Adicionar</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cta-cardapio">
+                <p>O seu pedido pode ser retirado em 30 minutos. Consulte taxa de <a href="#">delivery</a>.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-bloco">
+                <h4>Padaria do Pipo</h4>
+                <p>
+                    <strong>Endereço:</strong> Rua dos Bobos, 0 <br>
+                    <strong>Telefone:</strong> (11) 99626-5831<br>
+                    <strong>Email:</strong> padariadopipo@gmail.com.br
+                </p>
+            </div>
+
+            <div class="footer-bloco">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html#destaque-do-dia">Nossos Destaques</a></li>
+                    <li><a href="index.html#localizacao">Horários e Localização</a></li>
+                    <li><a href="cardapio.html">Cardápio Completo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bloco sociais">
+                <h4>Siga-nos</h4>
+                <div class="icones-sociais">
+                    <a href="#" target="_blank">📸 Instagram</a>
+                    <a href="#" target="_blank">💬 WhatsApp</a>
+                </div>
+                <p class="copyright">
+                    © 2025 Padaria do Pipo. Todos os direitos reservados.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

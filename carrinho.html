@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras | Padaria do Pipo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">Padaria do Pipo</a>
+        </div>
+
+        <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu de navegação" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#por-que-pipo">Quem Somos</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="index.html#localizacao">Localização</a></li>
+                <li><a href="carrinho.html" class="carrinho-link">
+                        Carrinho
+                        <span id="carrinho-contador">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="carrinho-de-compras">
+
+            <div class="carrinho-acoes-superiores">
+                <a href="cardapio.html" class="btn-continuar-comprando">
+                    ← Continuar Comprando
+                </a>
+            </div>
+
+            <h2>Seu Carrinho</h2>
+
+            <div class="itens-do-carrinho-container">
+            </div>
+
+            <div class="area-calculo-frete">
+                <h3>Calcular Frete e Total</h3>
+                <div class="cep-input-group">
+                    <label for="cep">CEP para Entrega:</label>
+                    <input type="text" id="cep" placeholder="00000-000" maxlength="9">
+                    <button id="btn-calcular-frete">Calcular</button>
+                </div>
+                <div class="resultado-frete">
+                    <p id="frete-valor-display">Frete: R$ 0,00</p>
+                </div>
+            </div>
+
+            <div class="resumo-pedido">
+                <div class="resumo-linha">
+                    <strong>Subtotal:</strong> <span id="subtotal-display">R$ 0,00</span>
+                </div>
+                <div class="resumo-linha">
+                    <strong>Frete:</strong> <span id="frete-display">R$ 0,00</span>
+                </div>
+                <div class="resumo-linha total-a-pagar">
+                    <strong>Total a Pagar:</strong> <span id="total-final-display">R$ 0,00</span>
+                </div>
+            </div>
+
+            <div class="cta-carrinho-container">
+                <a href="cardapio.html" class="btn-continuar-comprando-rodape">Continuar Comprando</a>
+                <a href="#" class="btn-finalizar-pedido">Finalizar Pedido</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-bloco">
+                <h4>Padaria do Pipo</h4>
+                <p>
+                    <strong>Endereço:</strong> Rua dos Bobos, 0 <br>
+                    <strong>Telefone:</strong> (11) 99626-5831<br>
+                    <strong>Email:</strong> padariadopipo@gmail.com.br
+                </p>
+            </div>
+            <div class="footer-bloco">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="index.html#destaque-do-dia">Nossos Destaques</a></li>
+                    <li><a href="index.html#localizacao">Horários e Localização</a></li>
+                    <li><a href="cardapio.html">Cardápio Completo</a></li>
+                </ul>
+            </div>
+            <div class="footer-bloco sociais">
+                <h4>Siga-nos</h4>
+                <div class="icones-sociais">
+                    <a href="#" target="_blank">📸 Instagram</a>
+                    <a href="#" target="_blank">💬 WhatsApp</a>
+                </div>
+                <p class="copyright">
+                    © 2025 Padaria do Pipo. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

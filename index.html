@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Padaria do Pipo: Pães artesanais feitos com calma. Receitas tradicionais, fermentação natural e pedido online.">
+    <meta name="keywords"
+        content="padaria do pipo, pães artesanais, fermentação natural, doces, delivery, receitas da vó">
+    <meta name="author" content="Seu Nome">
+    <title>Padaria do Pipo - Pães Artesanais Feitos com Calma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">Padaria do Pipo</a>
+        </div>
+
+        <button class="menu-hamburguer" id="menu-hamburguer" aria-label="Abrir menu de navegação" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#por-que-pipo">Quem Somos</a></li>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="#localizacao">Localização</a></li>
+                <li><a href="carrinho.html" class="carrinho-link">
+                        Carrinho
+                        <span id="carrinho-contador">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="destaque-do-dia">
+            <h2>✨ Destaques do Forno Hoje</h2>
+            <p>
+                Confira o que acabou de sair quentinho! Nossos produtos mais amados, com o sabor artesanal que você
+                conhece.
+            </p>
+
+            <div class="destaques-container">
+                <article class="produto-card">
+                    <img src="assets/pao-campagne.jpg" alt="Pão Campagne de Fermentação Lenta" class="produto-imagem">
+                    <h3>Pão Campagne</h3>
+                    <p class="descricao">
+                        Crosta rústica e miolo macio. Perfeito para acompanhar seu café da manhã.
+                    </p>
+                    <span class="produto-subtitulo">Fermentação Lenta</span>
+                </article>
+
+                <article class="produto-card">
+                    <img src="assets/bolo-laranja.jpg" alt="Bolo de Laranja da Vó" class="produto-imagem">
+                    <h3>Bolo de Laranja da Vó</h3>
+                    <p class="descricao">
+                        Fofinho, com cobertura de glacê tradicional. Sabor que remete à infância.
+                    </p>
+                    <span class="produto-subtitulo">Receita da Vó</span>
+                </article>
+
+                <article class="produto-card">
+                    <img src="assets/croissant.jpg" alt="Croissant Clássico de Manteiga" class="produto-imagem">
+                    <h3>Croissant Clássico</h3>
+                    <p class="descricao">
+                        Manteiga pura, folhado perfeito. Ideal para um lanche rápido.
+                    </p>
+                    <span class="produto-subtitulo">Feito com Manteiga Pura</span>
+                </article>
+
+                <article class="produto-card">
+                    <img src="assets/foccacia.jpg" alt="Focaccia com Alecrim e Sal Grosso" class="produto-imagem">
+                    <h3>Focaccia com Alecrim</h3>
+                    <p class="descricao">
+                        Massa aerada, azeite extra virgem. O pão que abraça o sabor da Itália.
+                    </p>
+                    <span class="produto-subtitulo">Massa Aerada, Azeite Extra Virgem.</span>
+                </article>
+
+                <article class="produto-card">
+                    <img src="assets/cafe.jpg" alt="Café Especial Coado" class="produto-imagem">
+                    <h3>Café Especial Coado</h3>
+                    <p class="descricao">
+                        Grãos selecionados, coado na hora. A pausa perfeita no seu dia.
+                    </p>
+                    <span class="produto-subtitulo">Grãos Selecionados, Coado na Hora.</span>
+                </article>
+            </div>
+
+
+            <div class="cta-destaques">
+                <a href="cardapio.html" class="btn-principal-destaques">Ver Cardápio Completo</a>
+            </div>
+
+        </section>
+
+        <section id="por-que-pipo">
+            <h2>💡 Por que Escolher a Padaria do Pipo?</h2>
+            <p class="paragrafo-destaque">
+                Na Padaria do Pipo, acreditamos que a pressa é inimiga do sabor. Nossos pães são feitos com o tempo
+                que precisam, usando técnicas artesanais e receitas da nossa família. Quando você leva um produto Pipo
+                para casa, leva o toque humano e o carinho de quem ama o que faz.
+            </p>
+
+            <h3>Nossos Compromissos de Qualidade</h3>
+
+            <div class="compromissos-container">
+
+                <div class="compromisso-card">
+                    <span class="icone">⏳</span>
+                    <h4>Fermentação Lenta e Natural</h4>
+                    <p>Respeitamos o tempo do pão. Esse processo garante sabor profundo, melhor digestão e a textura
+                        perfeita que você ama.</p>
+                </div>
+
+                <div class="compromisso-card">
+                    <span class="icone">🌱</span>
+                    <h4>Ingredientes de Produtores Locais</h4>
+                    <p>Apoiamos a vizinhança e garantimos o frescor diário. Da fazenda para a nossa bancada, sem
+                        intermediários.</p>
+                </div>
+
+                <div class="compromisso-card">
+                    <span class="icone">💚</span>
+                    <h4>Opções Veganas e Sem Glúten</h4>
+                    <p>Pensamos em todas as dietas e restrições. Oferecemos uma linha dedicada de produtos inclusivos
+                        com o mesmo sabor Pipo.</p>
+                </div>
+
+                <div class="compromisso-card">
+                    <span class="icone">🤝</span>
+                    <h4>Atendimento Familiar</h4>
+                    <p>Sempre um sorriso e uma dica do padeiro. Nosso toque acolhedor faz você se sentir em casa desde a
+                        porta de entrada.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="localizacao">
+            <h2>📍 Localização e Horários</h2>
+            <p class="paragrafo-destaque">
+                Estamos no coração do bairro, na <strong>Rua dos Bobos, número 0</strong>. Venha nos visitar e sentir o
+                aroma do
+                pão recém-assado! Use o mapa abaixo para nos encontrar facilmente.
+            </p>
+
+            <h3>🕒 Horário de Atendimento</h3>
+
+            <ol class="lista-horarios">
+                <li>Segunda a Sexta: 6h30 às 19h (Oportunidade para Café/Almoço)</li>
+                <li>Sábado: 7h às 18h</li>
+                <li>Domingo: 7h às 13h (Apenas Pães e Café)</li>
+                <li>Feriados: Consulte-nos</li>
+            </ol>
+
+            <p>
+                Atenção: Aos domingos, trabalhamos apenas com a venda de pães e produtos de café da manhã. Precisa de um
+                bolo especial? <a href="#">Acesse nossa seção de Encomendas</a> ou nos chame no WhatsApp.
+            </p>
+            <div class="mapa-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3075.8459820627777!2d-46.225795888582!3d-23.539050180784635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce77c1f086aa4b%3A0x96ca532e410b1342!2sPadaria%20Jolie!5e0!3m2!1spt-BR!2sbr!4v1759493096412!5m2!1spt-BR!2sbr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </section>
+
+        <section id="pedido-online">
+
+            <h3>Como Funciona o Pedido Online</h3>
+            <ol class="passos-online">
+                <li>
+                    <strong>1.</strong> Escolha: Navegue no cardápio completo (pães, doces, salgados, opções veganas).
+                </li>
+                <li>
+                    <strong>2.</strong> Peça: Adicione ao carrinho e personalize seu pedido.
+                </li>
+                <li>
+                    <strong>3.</strong> Retire/Receba: Escolha Retirada (pronta em 30 min) ou Receba em casa (delivery).
+                </li>
+            </ol>
+        </section>
+
+        <div class="cta-principal-container">
+            <a href="cardapio.html" class="cta-button">
+                Fazer Meu Pedido Agora!
+            </a>
+        </div>
+
+        <p>
+            Precisa de um bolo especial para sua festa? <a href="#">Acesse nossa seção de Encomendas</a> ou nos chame no
+            WhatsApp.
+        </p>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-bloco">
+                <h4>Padaria do Pipo</h4>
+                <p>
+                    <strong>Endereço:</strong> Rua dos Bobos, 0 <br>
+                    <strong>Telefone:</strong> (11) 99626-5831<br>
+                    <strong>Email:</strong> padariadopipo@gmail.com.br
+                </p>
+            </div>
+
+            <div class="footer-bloco">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#destaque-do-dia">Nossos Destaques</a></li>
+                    <li><a href="#localizacao">Horários e Localização</a></li>
+                    <li><a href="cardapio.html">Cardápio Completo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bloco sociais">
+                <h4>Siga-nos</h4>
+                <div class="icones-sociais">
+                    <a href="#" target="_blank">📸 Instagram</a>
+                    <a href="#" target="_blank">💬 WhatsApp</a>
+                </div>
+                <p class="copyright">
+                    © 2025 Padaria do Pipo. Todos os direitos reservados.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

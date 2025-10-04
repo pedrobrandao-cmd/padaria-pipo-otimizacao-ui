@@ -1,0 +1,1332 @@
+/*
+    ----------------------------------------------------------------------
+    PALETA DE CORES (Briefing)
+    ----------------------------------------------------------------------
+    Principal (Terracota): #C96A49
+    Secundária (Creme): #FFF6EA
+    Apoio (Verde-oliva): #6B8A5A
+    Neutros:
+        Cinza-escuro (Texto): #333333
+        Cinza-claro (Fundo): #F4F4F4
+*/
+
+/* 1. Importação das Fontes (Tipografia) */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+/* Estilo para o Botão 'Ver Cardápio' nos Destaques */
+.cta-destaques {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.btn-principal-destaques {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-principal);
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-principal-destaques:hover {
+    opacity: 0.9;
+}
+
+/* 2. Reset Básico e Variáveis de Cores */
+:root {
+    /* Cores */
+    --cor-principal: #C96A49;
+    /* Terracota */
+    --cor-secundaria: #FFF6EA;
+    /* Creme */
+    --cor-apoio: #6B8A5A;
+    /* Verde-oliva */
+    --cor-texto: #333333;
+    /* Cinza-escuro */
+    --cor-fundo-claro: #F4F4F4;
+    /* Cinza-claro */
+
+    /* Tipografia */
+    --fonte-titulo: 'Merriweather', serif;
+    /* Serifada com personalidade */
+    --fonte-corpo: 'Roboto', sans-serif;
+    /* Sans legível */
+    --tamanho-base: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    font-size: var(--tamanho-base);
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo-claro);
+    /* Fundo Cinza-claro */
+    padding-top: 20px;
+    /* Pequeno respiro no topo */
+}
+
+/* 3. Estilização Global de Títulos e Textos */
+h1,
+h2,
+h3 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+    /* Terracota para títulos */
+    margin-bottom: 0.5em;
+    /* Espaçamento abaixo do título */
+    line-height: 1.2;
+}
+
+/* A estilização do h1 é sobrescrita pelo header h1 no Bloco 17, mas mantemos a base aqui */
+h1 {
+    font-size: 2.5em;
+    /* ~40px */
+    text-align: center;
+    color: var(--cor-texto);
+    /* H1 global em Cinza-escuro */
+}
+
+h2 {
+    font-size: 2em;
+    /* ~32px */
+    border-bottom: 2px solid var(--cor-apoio);
+    /* Linha Verde-oliva para destaque */
+    padding-bottom: 0.2em;
+}
+
+h3 {
+    font-size: 1.4em;
+    /* ~22px */
+    color: var(--cor-apoio);
+    /* Verde-oliva para subseções */
+}
+
+p {
+    margin-bottom: 1.5em;
+    text-align: justify;
+}
+
+a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 4. Estrutura Semântica e Layout */
+header {
+    background-color: var(--cor-principal);
+    /* <-- AGORA É TERRRACOTA (Cor Principal) */
+    color: white;
+    /* Texto claro */
+    padding: 15px 30px;
+    /* Removemos o border-bottom de 3px aqui, pois a cor do fundo será a mesma cor da borda anterior */
+    margin-bottom: 40px;
+
+    /* Propriedades para Navbar: Flexbox para alinhar logo e navegação */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra um pouco mais escura */
+}
+
+main {
+    max-width: 960px;
+    /* Largura máxima para conteúdo em desktop */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    /* Conteúdo em branco para boa leitura */
+    border-radius: 8px;
+    /* Cantos arredondados, toque artesanal */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    /* Sombra suave */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--cor-texto);
+    /* Fundo escuro (Estilo base, Bloco 15 tem o definitivo) */
+    color: white;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: var(--cor-secundaria);
+}
+
+/* 5. Estilização de Listas (UL e OL) */
+ul,
+ol {
+    margin: 0 0 1.5em 25px;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 0.8em;
+    padding-left: 5px;
+}
+
+/* Lista não-ordenada (Produtos/Diferenciais) */
+ul li {
+    list-style-type: none;
+    /* Remove o marcador padrão */
+    border-left: 3px solid var(--cor-principal);
+    /* Marcador visual Terracota */
+    padding-left: 10px;
+}
+
+/* Lista ordenada (Passos/Horários) */
+ol {
+    list-style-type: decimal;
+    margin-left: 35px;
+    /* Mais espaço para os números */
+}
+
+ol li {
+    font-weight: bold;
+    /* Destaca os horários/passos (Sobrescrito por .passos-online) */
+}
+
+
+/* 6. Responsividade Básica (Mobile-First) */
+/* A partir de 768px, o layout fica um pouco mais largo */
+@media (min-width: 768px) {
+
+    /* Esta regra é sobrescrita pelo header h1 no Bloco 17 */
+    h1 {
+        font-size: 3em;
+        /* ~48px desktop */
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
+
+/* 7. ESTILIZAÇÃO DOS CARDS DE DESTAQUE (PRODUTOS) */
+
+.destaques-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+    /* Centraliza os cards */
+}
+
+.produto-card {
+    width: 100%;
+    background-color: var(--cor-secundaria);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.produto-card h3 {
+    color: var(--cor-texto);
+    margin-top: 15px;
+    font-size: 1.5em;
+}
+
+.produto-imagem {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.descricao {
+    padding: 0 15px;
+    font-size: 0.95em;
+    color: var(--cor-texto);
+}
+
+.produto-subtitulo {
+    display: block;
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 8. RESPONSIVIDADE PARA CARDS (Desktop e Tablet) */
+
+@media (min-width: 600px) {
+
+    /* Tablet: 2 colunas */
+    .produto-card {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (min-width: 900px) {
+
+    /* Desktop: 3 colunas */
+    .produto-card {
+        width: calc(33.333% - 13.333px);
+    }
+}
+
+/* 9. AJUSTES FINOS DE ESTILO (Parágrafo de Introdução aos Cards) */
+
+/* Estiliza o parágrafo de introdução da seção de destaque (#destaque-do-dia) */
+#destaque-do-dia>p {
+    font-family: var(--fonte-titulo);
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--cor-apoio);
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+/* Centraliza o conteúdo textual dentro de CADA CARD */
+.produto-card h3,
+.produto-card p,
+.produto-card .produto-subtitulo {
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+/* 10. ESTILO DO PARÁGRAFO DE DESTAQUE (Por que Pipo?) */
+
+.paragrafo-destaque {
+    font-family: var(--fonte-titulo);
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--cor-apoio);
+    text-align: justify;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    /* Remove padding lateral */
+}
+
+
+/* 11. ESTILIZAÇÃO DOS CARDS DE COMPROMISSO */
+
+.compromissos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.compromisso-card {
+    width: 100%;
+    background-color: var(--cor-fundo-claro);
+    border-left: 5px solid var(--cor-principal);
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.compromisso-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.compromisso-card h4 {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.compromisso-card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.icone {
+    font-size: 1.8em;
+    color: var(--cor-apoio);
+    display: block;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 650px) {
+    .compromisso-card {
+        width: calc(50% - 10px);
+    }
+}
+
+
+/* 12. ESTILIZAÇÃO DA SEÇÃO DE LOCALIZAÇÃO E HORÁRIOS */
+
+.lista-horarios {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 5px 0;
+    /* COMPACTAÇÃO FINAL: Reduzido para 5px */
+    border-top: 1px dashed var(--cor-apoio);
+    border-bottom: 1px dashed var(--cor-apoio);
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-horarios li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    /* COMPACTAÇÃO FINAL: Reduzido para 5px */
+    margin-bottom: 0;
+    font-size: 1.1em;
+}
+
+.lista-horarios li:nth-child(odd) {
+    background-color: var(--cor-secundaria);
+    /* Linhas alternadas com fundo Creme */
+}
+
+/* Estilo para o item de Feriados (Destaque Terracota) */
+.lista-horarios li:last-child {
+    font-weight: bold;
+    color: var(--cor-principal);
+    border-top: 2px solid var(--cor-principal);
+    justify-content: center;
+    /* Centraliza o texto "Feriados: Consulte-nos" */
+}
+
+/* Oculta os marcadores padrão (1, 2, 3...) */
+.lista-horarios li::before {
+    content: none;
+}
+
+/* Centraliza o título da seção de Horários */
+#localizacao h3 {
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------------
+    13. ESTILIZAÇÃO DO BOTÃO CTA PRINCIPAL
+    ---------------------------------------------------------------------- */
+
+.cta-principal-container {
+    text-align: center;
+    /* Centraliza o botão dentro da div */
+    margin: 40px auto;
+    /* Espaçamento acima e abaixo da seção */
+    padding: 20px 0;
+}
+
+.cta-button {
+    /* Aparência do botão */
+    display: inline-block;
+    /* Permite que o link tenha altura e largura definidas */
+    padding: 15px 30px;
+
+    /* Cores de Alto Contraste */
+    background-color: var(--cor-principal);
+    /* Fundo Terracota */
+    color: var(--cor-secundaria);
+    /* Texto Creme (Claro) */
+
+    /* Tipografia e Borda */
+    font-family: var(--fonte-titulo);
+    /* Usa a fonte serifada para destaque */
+    font-size: 1.5em;
+    /* Tamanho grande para chamar a atenção */
+    font-weight: 700;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 50px;
+    /* Borda arredondada (pílula) para um toque amigável */
+
+    /* Efeito de Sombra e Transição */
+    box-shadow: 0 4px 10px rgba(201, 106, 73, 0.4);
+    /* Sombra suave na cor Terracota */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    /* Efeito ao passar o mouse: Fica mais escuro e sobe um pouco */
+    background-color: #A6593C;
+    /* Terracota ligeiramente mais escura */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(201, 106, 73, 0.6);
+}
+
+/* ----------------------------------------------------------------------
+    14. ESTILIZAÇÃO DA SEÇÃO "COMO FUNCIONA O PEDIDO ONLINE"
+    ---------------------------------------------------------------------- */
+
+.passos-online {
+    list-style: none;
+    /* Remove a numeração padrão (1, 2, 3) */
+    padding: 0;
+    margin: 30px auto;
+    max-width: 700px;
+    /* Limita a largura do bloco para melhor leitura */
+}
+
+.passos-online li {
+    display: flex;
+    /* Layout flexível para alinhar o número ao texto */
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+
+    /* Borda sutil para separar os passos */
+    border-bottom: 1px dotted var(--cor-fundo-claro);
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+/* Estiliza o número (o "1.", "2.", "3.") para parecer um ícone */
+.passos-online li strong {
+    /* O texto forte (o número) será o marcador visual */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Formato de Círculo Terracota */
+    width: 35px;
+    height: 35px;
+    background-color: var(--cor-principal);
+    /* Fundo Terracota */
+    color: white;
+    /* Texto Branco/Claro */
+    border-radius: 50%;
+
+    /* Espaçamento e Fonte */
+    margin-right: 15px;
+    font-family: var(--fonte-titulo);
+    font-size: 1.2em;
+    font-weight: 700;
+    flex-shrink: 0;
+    /* Impede que o círculo diminua em telas pequenas */
+}
+
+/* ----------------------------------------------------------------------
+    15. ESTILIZAÇÃO DO RODAPÉ (FOOTER)
+    ---------------------------------------------------------------------- */
+
+footer {
+    background-color: var(--cor-texto);
+    /* Fundo Cinza-escuro */
+    color: white;
+    /* Texto Branco/Claro */
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite quebras de linha em mobile */
+    max-width: 960px;
+    /* Limita a largura para alinhar com o 'main' */
+    margin: 0 auto;
+    gap: 30px;
+    /* Espaço entre as colunas */
+}
+
+.footer-bloco {
+    width: 100%;
+    /* Ocupa a largura total em mobile */
+}
+
+.footer-bloco h4 {
+    color: var(--cor-secundaria);
+    /* Títulos em Creme */
+    font-family: var(--fonte-titulo);
+    border-bottom: 2px solid var(--cor-principal);
+    /* Linha Terracota */
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.footer-bloco p,
+.footer-bloco ul {
+    font-size: 0.9em;
+    line-height: 1.8;
+}
+
+.footer-bloco ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-bloco a {
+    color: var(--cor-secundaria);
+    /* Links em Creme */
+    text-decoration: none;
+}
+
+.footer-bloco a:hover {
+    color: var(--cor-principal);
+    /* Hover em Terracota */
+}
+
+.icones-sociais a {
+    margin-right: 15px;
+    font-size: 1.1em;
+    display: inline-block;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    /* Linha pontilhada clara */
+    width: 100%;
+    order: 4;
+    /* Garante que fique sempre na última linha */
+}
+
+/* Responsividade para Desktop/Tablet: Layout de 3 Colunas */
+@media (min-width: 600px) {
+    .footer-bloco {
+        width: calc(33.333% - 20px);
+        /* 3 colunas com espaço entre elas */
+    }
+}
+
+/* ----------------------------------------------------------------------
+    16. ESTILIZAÇÃO DO MAPA DE LOCALIZAÇÃO
+    ---------------------------------------------------------------------- */
+
+.mapa-container {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 3px solid var(--cor-apoio);
+    /* Borda Verde-oliva para destacar */
+    border-radius: 8px;
+    overflow: hidden;
+    /* Garante que a borda arredondada seja aplicada ao iframe */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mapa-container iframe {
+    /* Garante que o iframe ocupe todo o espaço do container e seja 100% responsivo */
+    display: block;
+    width: 100%;
+    height: 400px;
+    /* Altura fixa para visualização em desktop */
+}
+
+/* Responsividade: Reduz a altura do mapa em telas de celular */
+@media (max-width: 600px) {
+    .mapa-container iframe {
+        height: 250px;
+    }
+}
+
+/* ----------------------------------------------------------------------
+    17. ESTILIZAÇÃO DO NOVO CABEÇALHO (NAVBAR)
+    ---------------------------------------------------------------------- */
+
+/* Estilo para a Logo */
+.logo a {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8em;
+    /* Tamanho da logo */
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    /* Logo em Creme */
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.logo a:hover {
+    color: var(--cor-principal);
+    /* Terracota no hover */
+}
+
+/* Estilo para a Navegação Principal */
+.main-nav ul {
+    list-style: none;
+    /* Remove marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Flexbox para alinhar os itens horizontalmente */
+    gap: 25px;
+    /* Espaço entre os links */
+}
+
+.main-nav li a {
+    color: var(--cor-secundaria);
+    /* Links em CREME no estado normal */
+    text-decoration: none;
+    font-family: var(--fonte-corpo);
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.main-nav li a:hover {
+    color: white;
+    /* Cor branca para ALTO contraste no hover (ou use Terracota, que é mais claro que o fundo) */
+    /* Vamos usar: var(--cor-secundaria); se o fundo fosse verde, mas com o fundo Terracota, o Branco (White) é melhor! */
+    text-decoration: underline;
+    /* Adiciona underline para reforçar o hover */
+}
+
+.main-nav li a {
+    color: white;
+    /* Links em Branco */
+    text-decoration: none;
+    font-family: var(--fonte-corpo);
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.main-nav li a:hover {
+    color: var(--cor-apoio);
+    /* Verde Oliva no hover */
+}
+
+/* Responsividade para o Navbar (Mobile) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        /* Empilha logo e menu em telas pequenas */
+        padding: 15px 20px;
+        align-items: flex-start;
+        /* Alinha itens à esquerda */
+    }
+
+    .main-nav {
+        margin-top: 15px;
+        /* Espaço entre logo e menu */
+        width: 100%;
+        text-align: left;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        /* Links um abaixo do outro */
+        gap: 10px;
+        /* Menor espaço entre os links */
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        /* Centraliza logo no mobile */
+    }
+
+    .logo a {
+        font-size: 1.6em;
+    }
+}
+
+/* Estilo para a Logo */
+.logo a {
+    font-family: var(--fonte-titulo);
+    font-size: 1.8em;
+    /* Tamanho da logo */
+    font-weight: 700;
+    color: var(--cor-secundaria);
+    /* Logo em Creme (normal) */
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.3s;
+    /* Adicionado para efeito suave */
+}
+
+.logo a:hover {
+    color: var(--cor-secundaria)
+}
+
+/* ----------------------------------------------------------------------
+    18. ESTILIZAÇÃO DA PÁGINA CARDÁPIO (cardapio.html)
+    ---------------------------------------------------------------------- */
+
+.introducao-cardapio {
+    text-align: center;
+    font-family: var(--fonte-titulo);
+    font-size: 1.1em;
+    color: var(--cor-apoio);
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.bloco-cardapio {
+    margin-bottom: 35px;
+    padding: 20px;
+    border: 1px solid var(--cor-fundo-claro);
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.bloco-cardapio h3 {
+    color: var(--cor-principal);
+    border-bottom: 1px dotted var(--cor-apoio);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.lista-itens {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ----------------------------------------------------------------------
+    ESTILIZAÇÃO DOS PRODUTOS (Layout limpo com imagem e Flexbox)
+    ---------------------------------------------------------------------- */
+
+/* Container Principal do Item: Flexbox para alinhar imagem, info e botão */
+.produto-cardapio {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente no centro */
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cor-fundo-claro);
+    gap: 15px;
+    /* Espaçamento entre os elementos (imagem, info, botão) */
+
+    /* Remove a borda lateral Terracota do estilo global */
+    border-left: none;
+}
+
+.produto-cardapio:last-child {
+    border-bottom: none;
+}
+
+/* Imagem do Produto: Tamanho fixo e encaixe perfeito (Object-fit) */
+.imagem-cardapio {
+    width: 80px;
+    /* Largura fixa para manter o alinhamento */
+    height: 80px;
+    /* Altura fixa */
+    object-fit: cover;
+    /* Recorta a imagem para preencher o box sem distorcer */
+    border-radius: 4px;
+    flex-shrink: 0;
+    /* Impede que a imagem diminua em telas pequenas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Área de Informação (Título/Descrição/Preço) */
+.info-produto {
+    flex-grow: 1;
+    /* Permite que este bloco ocupe o espaço restante */
+    margin-right: 10px;
+}
+
+.info-produto strong {
+    display: block;
+    color: var(--cor-apoio);
+    font-size: 1.1em;
+    margin-bottom: 3px;
+}
+
+.info-produto p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.preco {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-principal);
+    font-weight: 700;
+    font-size: 1.2em;
+    display: block;
+    /* Garante que o preço fique em uma linha própria se necessário */
+}
+
+/* Botão de Carrinho (CTA Secundário) */
+.btn-carrinho {
+    /* Estilo do botão */
+    background-color: var(--cor-apoio);
+    /* Fundo Verde-oliva */
+    color: var(--cor-secundaria);
+    /* Texto Creme */
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
+    /* Impede que o botão diminua */
+}
+
+.btn-carrinho:hover {
+    background-color: var(--cor-principal);
+    /* Hover para Terracota */
+    text-decoration: none;
+}
+
+/* Responsividade: Ajusta o layout para mobile, empilhando o botão */
+@media (max-width: 500px) {
+    .produto-cardapio {
+        flex-wrap: wrap;
+        /* Permite quebra de linha */
+        align-items: flex-start;
+    }
+
+    .info-produto {
+        width: calc(100% - 95px);
+        /* Ocupa o espaço ao lado da imagem */
+    }
+
+    .btn-carrinho {
+        /* Move o botão para baixo da info, ocupando a largura total (ou alinha à direita) */
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Reorganiza a ordem: Imagem + Info em cima, Botão embaixo */
+    .imagem-cardapio {
+        order: 1;
+    }
+
+    .info-produto {
+        order: 2;
+    }
+
+    .btn-carrinho {
+        order: 3;
+    }
+}
+
+/* ----------------------------------------------------------------------
+    19. ESTILIZAÇÃO DO LINK CARRINHO E DA PÁGINA CARRINHO
+    ---------------------------------------------------------------------- */
+
+/* Destaque para o link 'Carrinho' (Já ajustado) */
+.carrinho-link {
+    color: var(--cor-secundaria) !important;
+    font-weight: bold;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.carrinho-link:hover {
+    background-color: var(--cor-apoio);
+    color: white !important;
+    border-color: var(--cor-apoio);
+}
+
+/* Estilização da página de Carrinho */
+#carrinho-de-compras {
+    padding-top: 20px;
+}
+
+.itens-do-carrinho-container {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    border: 1px solid var(--cor-fundo-claro);
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Layout de cada item no carrinho (Flexbox) */
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--cor-fundo-claro);
+    gap: 15px;
+}
+
+.item-carrinho:last-child {
+    border-bottom: none;
+}
+
+.imagem-carrinho {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.info-carrinho {
+    flex-grow: 1;
+    /* Ocupa o espaço central */
+}
+
+.info-carrinho strong {
+    color: var(--cor-apoio);
+    display: block;
+}
+
+.preco-unitario {
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Controles de Quantidade */
+.quantidade-controle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.campo-quantidade {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.btn-qty {
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto);
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.btn-qty:hover {
+    background-color: #ddd;
+}
+
+/* Subtotal e Botão Remover */
+.subtotal-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.subtotal-valor {
+    color: var(--cor-principal);
+    font-size: 1.1em;
+}
+
+.btn-remover-item {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-remover-item:hover {
+    color: var(--cor-principal);
+}
+
+/* --------------------------------- */
+/* Estilização da Área de Frete e Total */
+/* --------------------------------- */
+.area-calculo-frete {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    border: 1px solid var(--cor-fundo-claro);
+    border-radius: 6px;
+}
+
+.area-calculo-frete h3 {
+    color: var(--cor-apoio);
+    border-bottom: 1px solid var(--cor-fundo-claro);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.cep-input-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+#cep {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px;
+}
+
+#btn-calcular-frete {
+    padding: 10px 15px;
+    background-color: var(--cor-apoio);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-calcular-frete:hover {
+    background-color: #6a7c4f;
+    /* Tom mais escuro do verde */
+}
+
+.resultado-frete {
+    text-align: center;
+    margin-top: 15px;
+    font-style: italic;
+    color: var(--cor-principal);
+}
+
+/* Resumo Final do Pedido */
+.resumo-pedido {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+    border: 1px solid var(--cor-fundo-claro);
+    border-radius: 6px;
+}
+
+.resumo-linha {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+
+.total-a-pagar {
+    border-top: 2px solid var(--cor-principal);
+    padding-top: 15px;
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#total-final-display {
+    color: var(--cor-principal);
+}
+
+.cta-carrinho-container {
+    /* Centraliza os botões */
+    text-align: center;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilização do Contador de Itens no Navbar */
+#carrinho-contador {
+    background-color: #A6593C;
+    /* Terracota Escuro/Vermelho de notificação */
+    color: white;
+    border-radius: 50%;
+    /* Torna-o um círculo */
+    padding: 2px 7px;
+    font-size: 0.7em;
+    /* Menor que o texto principal */
+    font-weight: 700;
+    margin-left: 5px;
+
+    /* Posição: Esconde quando estiver em 0 (ou use display: none no JS) */
+    opacity: 0.8;
+    /* Esta linha será controlada pelo JavaScript */
+}
+
+/* Exemplo de CSS para o botão 'Voltar para a Página Inicial' */
+.cardapio-acoes-superiores {
+    padding: 10px 0 20px 0;
+}
+
+.btn-voltar-inicio {
+    /* Usando os mesmos estilos do botão anterior para manter a consistência */
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: transparent;
+    color: var(--cor-secundaria);
+    /* Pode usar uma cor diferente, como a secundária */
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar-inicio:hover {
+    background-color: var(--cor-secundaria);
+    color: white;
+}
+
+/* --- ESTILOS DE NAVEGAÇÃO / BOTÕES DE VOLTA (carrinho.html e cardapio.html) --- */
+
+.carrinho-acoes-superiores,
+.cardapio-acoes-superiores {
+    padding: 15px 0 20px 0;
+    /* Espaçamento acima e abaixo dos botões */
+}
+
+/* Estilo Base para o botão "Continuar Comprando" (no carrinho.html) */
+.btn-continuar-comprando {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: transparent;
+    color: var(--cor-principal, #d35400);
+    /* Define uma cor principal forte (ex: laranja escuro) */
+    border: 1px solid var(--cor-principal, #d35400);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo de Hover */
+.btn-continuar-comprando:hover {
+    background-color: var(--cor-principal, #d35400);
+    color: white;
+    /* Texto branco quando passa o mouse */
+}
+
+
+/* Estilo para o botão "Voltar para a Página Inicial" (no cardapio.html) */
+.btn-voltar-inicio {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: transparent;
+    color: var(--cor-secundaria, #27ae60);
+    /* Define uma cor secundária forte (ex: verde escuro) */
+    border: 1px solid var(--cor-secundaria, #27ae60);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo de Hover */
+.btn-voltar-inicio:hover {
+    background-color: var(--cor-secundaria, #27ae60);
+    color: white;
+}
+
+/* Se você usa variáveis CSS (como --cor-principal), certifique-se de que elas estejam definidas no :root ou body. */
+
+/* ----------------------------------------------------------------------
+    CORREÇÃO: BOTÕES DE NAVEGAÇÃO SUPERIORES (VOLTAR/CONTINUAR)
+    ---------------------------------------------------------------------- */
+
+/* ... (outras regras) ... */
+
+/* 2. Botão "Voltar para a Página Inicial" */
+.btn-voltar-inicio {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: transparent;
+    color: var(--cor-principal); /* <-- MUDANÇA: Terracota para o texto */
+    border: 1px solid var(--cor-principal); /* <-- MUDANÇA: Terracota para a borda */
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.btn-voltar-inicio:hover {
+    background-color: var(--cor-principal);
+    color: white; /* Cor do texto no hover é branco */
+}
+
+.carrinho-acoes-superiores,
+.cardapio-acoes-superiores {
+    padding: 15px 0 35px 0; /* <-- MUDANÇA: Aumentado de 20px para 35px */
+    /* Espaçamento acima e abaixo dos botões */
+}
+
+/* --- INÍCIO: Estilos para Mobile (Design Responsivo) --- */
+
+/* Esta regra será ativada APENAS quando a largura da tela for de 768 pixels ou menor */
+@media (max-width: 768px) {
+
+    /* Exemplo 1: Deixar a navegação em coluna */
+    .navbar .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Exemplo 2: Ocultar itens que não cabem no menu de celular */
+    .navbar .main-nav li {
+        margin: 10px 0; /* Aumenta o espaço vertical entre os itens do menu */
+        display: block; /* Garante que ocupe a largura total */
+    }
+    
+    /* Exemplo 3: Aumentar o tamanho do texto para ser mais fácil de clicar */
+    body {
+        font-size: 18px;
+    }
+    
+    /* Exemplo 4: Forçar o footer (rodapé) a ficar em uma única coluna */
+    footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Você pode adicionar estilos para o carrinho, cardápio, etc. aqui dentro! */
+    .itens-do-carrinho-container {
+        display: block; /* Se estiver usando grid/flexbox, force para bloco */
+    }
+
+}
+
+/* --- FIM: Estilos para Mobile --- */
+
+/* Configuração básica para desktop: esconder o botão hamburger */
+.menu-hamburguer {
+    display: none; 
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--cor-principal); /* Cor marrom/terracota */
+    padding: 10px;
+}
+
+/* Classe que será adicionada pelo JavaScript para abrir o menu */
+.main-nav.aberto {
+    display: flex !important; /* Força o menu a aparecer quando estiver aberto */
+}
